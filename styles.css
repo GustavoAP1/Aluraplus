@@ -18,23 +18,30 @@ body {
     background-color: #00030C;
     color: var(--cor-primaria);
     font-family: var(--font);
+    
+
 }
 
-.corpo__tipo__primario{
-    background-image: url(./assets/Background.png);
+.corpo {
+    background-image: url(assets/Background.png);
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
+.corpo__tipo__primario {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0% 8%;
+}
 
 .corpo__primario__combo {
     display: flex;
     flex-direction: column;
-    justify-content: left;
-    width: 588px;
-    height: 431px;
+    align-items: center;
     padding: 125px 54px;
     text-align: center;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
 }
 
 
@@ -43,7 +50,7 @@ body {
 }
 
 .titulo {
-    font-size: 28px;
+    font-size: 1.75rem;
     font-style: bold;
 }
 
@@ -77,14 +84,13 @@ body {
 }
 
 .combo__descricao {
-    font-size: 12px;
+    font-size: .75rem;
 }
 
 .corpo__tipo__secundario {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 10%;
     gap: 70px;
     padding: 100px 8%;
 }
@@ -96,7 +102,7 @@ body {
 }
 
 .titulo__subtitulo {
-    font-size: 48px;
+    font-size: 3rem;
 }
 
 .botao__assine {
@@ -110,7 +116,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 145px 0px;
+    padding: 145px 8%;
 }
 
 .corpo__terciario__plataformas {
@@ -119,7 +125,7 @@ body {
 
 .nome__plataformas {
     font-style: bold;
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 .rodape {
@@ -128,6 +134,7 @@ body {
    align-items: center;
    gap: 24px;
    text-align: center;
+   padding: 0% 8%;
 }
 
 .rodape__links{
@@ -146,5 +153,38 @@ body {
 }
 
 .texto__rodape {
-    font-size: 14px;
+    font-size: .875rem;
+    padding: 0px 8%;
+}
+
+@media (max-width: 1000px) {
+    body {
+        background-image: url(assets/BackgroundCortado.png);
+        background-repeat: no-repeat;
+    }
+
+    .corpo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .corpo__tipo__primario{
+        grid-template-columns: 100%;
+    }
+
+    .corpo__primario__combo{
+        padding: 15% 8%;
+    }
+
+    .corpo__tipo__secundario {
+        flex-direction: column;
+    }
+
+    .img__plataformas {
+        width: 90%;
+    }
+
+    .rodape__links{
+        padding: 0% 8%;
+    }
 }
